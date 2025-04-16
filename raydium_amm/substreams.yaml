@@ -3,7 +3,7 @@ package:
   name: 'raydium_amm_events'
   version: v0.1.7
   description: Raydium AMM events substream
-  url: https://github.com/0xpapercut/solana-substreams
+  url: https://github.com/Ty-Sir/solana-substreams
   image: ./raydium.png
 
 imports:
@@ -14,6 +14,18 @@ protobuf:
     - raydium_amm.proto
   importPaths:
     - ./proto
+  excludePaths:
+    - sf/solana
+    - sf/substreams
+    - sf/substreams/rpc
+    - sf/substreams/v1
+    - sf/substreams/solana
+    - sf/substreams/sink
+    - sf/substreams/index
+    - sf/substreams/index/v1
+    - instructions.proto # sol.instructions.v1 from the v0.2.0 spkg
+    - transactions.proto # sol.transactions.v1 from the v0.2.0 spkg
+    - google
 
 binaries:
   default:
